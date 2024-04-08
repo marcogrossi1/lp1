@@ -15,6 +15,24 @@ class Lanche {
     }
 }
 
+class Cardapio {    
+    Lanche[] lanche;
+    
+    Cardapio (int num_elementos){
+        lanche = new Lanche[num_elementos];
+        
+        lanche[1] = new Lanche(1, "Cachorro Quente", 4.00);
+        lanche[2] = new Lanche(2, "X-Salada", 4.50);
+        lanche[3] = new Lanche(3, "X-Bacon", 5.00);
+        lanche[4] = new Lanche(4, "Torrada simples", 2.00);
+        lanche[5] = new Lanche(5, "Refrigerante", 1.50);
+    }
+    
+    double valorFinal (int cod, int qntd) {
+        return lanche[cod].preco * qntd;
+    }
+}
+
 public class Main {
     public static void main (String[] args) {
         Scanner input = new Scanner(System.in);
@@ -22,19 +40,11 @@ public class Main {
         
         int num_elementos = 6;
                 
-        Lanche[] cardapio = new Lanche[num_elementos];
-        
-        cardapio[1] = new Lanche(1, "Cachorro Quente", 4.00);
-        cardapio[2] = new Lanche(2, "X-Salada", 4.50);
-        cardapio[3] = new Lanche(3, "X-Bacon", 5.00);
-        cardapio[4] = new Lanche(4, "Torrada simples", 2.00);
-        cardapio[5] = new Lanche(5, "Refrigerante", 1.50);
-        
+        Cardapio card = new Cardapio(num_elementos);
+
         int cod = input.nextInt();
         int qntd = input.nextInt();
         
-        double total = cardapio[cod].preco * qntd;
-        
-        System.out.printf("Total: R$ %.2f\n", total);
+        System.out.printf("Total: R$ %.2f\n", card.valorFinal(cod, qntd));
     }
 }
