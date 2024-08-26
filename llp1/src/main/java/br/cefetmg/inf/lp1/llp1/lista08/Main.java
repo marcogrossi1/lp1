@@ -209,7 +209,6 @@ class BubbleSort {
 
         for(int i = 0; i < tam; i++)
             f.enfileirar(a[i]);
-
         return f;
     }
 }
