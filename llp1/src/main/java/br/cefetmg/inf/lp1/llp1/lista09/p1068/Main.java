@@ -1,4 +1,4 @@
-package br.cefetmg.inf.lp1.llp1.lista09; 
+package br.cefetmg.inf.lp1.llp1.lista09.p1068; 
 import java.util.Scanner;
 
 enum Status {

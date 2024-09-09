@@ -1,4 +1,4 @@
-package br.cefetmg.inf.lp1.llp1.lista08;
+package br.cefetmg.inf.lp1.llp1.lista08.p1042;
 import java.util.*;
 
 class FilaCircular {    
