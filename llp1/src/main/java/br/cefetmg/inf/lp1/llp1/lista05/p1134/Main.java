@@ -23,5 +23,7 @@ public class Main {
         System.out.printf("Alcool: %d\n", totalAlcool);
         System.out.printf("Gasolina: %d\n", totalGasolina);
         System.out.printf("Diesel: %d\n", totalDiesel);
+
+        input.close();
     }
 }

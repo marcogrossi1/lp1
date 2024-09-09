@@ -37,5 +37,7 @@ public class Main {
         }
         
         System.out.printf("Total: R$ %.2f\n", valorFinal);
+
+        input.close();
     }
 }

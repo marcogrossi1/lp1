@@ -26,6 +26,8 @@ public class Main {
             
             a = input.nextInt();
             b = input.nextInt();
+
+            input.close();
         }
     }
 }

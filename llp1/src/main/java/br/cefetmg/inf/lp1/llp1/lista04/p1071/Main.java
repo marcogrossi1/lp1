@@ -24,5 +24,7 @@ public class Main {
             }
         
         System.out.printf("%d\n", soma);
+        
+        input.close();
     }
 }

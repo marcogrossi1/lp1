@@ -22,5 +22,7 @@ public class Main {
         System.out.printf("%d Multiplo(s) de 3\n", mult3);
         System.out.printf("%d Multiplo(s) de 4\n", mult4);
         System.out.printf("%d Multiplo(s) de 5\n", mult5);
+
+        input.close();
     }
 }

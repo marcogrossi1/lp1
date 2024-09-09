@@ -12,5 +12,7 @@ public class Main {
         
         x = a + b;
         System.out.printf("X = %d\n", x);
+
+        input.close();
     }
 }

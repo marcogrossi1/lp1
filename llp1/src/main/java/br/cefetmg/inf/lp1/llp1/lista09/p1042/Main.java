@@ -127,9 +127,7 @@ class ListaArray implements Lista {
         return -1;
     }
 
-    public void pesquisarItem(int item) {
-        int cont = 0;
-        
+    public void pesquisarItem(int item) {        
         for(int i = 0; i < tamanho(); ++i)
             if(lista[i] == item)
                 System.out.println(i);

@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
+    @SuppressWarnings("unused")
     public static void main(String[] args){
         Locale.setDefault( Locale.US);
         Scanner input = new Scanner(System.in);
@@ -22,5 +23,7 @@ public class Main {
         valorTotal = numPecas1 * valorPeca1 + numPecas2 * valorPeca2;
         
         System.out.printf("VALOR A PAGAR: R$ %.2f\n", valorTotal);
+
+        input.close();
     }   
 }

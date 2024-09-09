@@ -12,5 +12,7 @@ public class Main {
             if(i % 2 == 1)
                 System.out.printf("%d\n", i);
         }
+
+        input.close();
     }
 }

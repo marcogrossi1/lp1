@@ -46,5 +46,7 @@ public class Main {
         int qntd = input.nextInt();
         
         System.out.printf("Total: R$ %.2f\n", card.valorFinal(cod, qntd));
+
+        input.close();
     }
 }

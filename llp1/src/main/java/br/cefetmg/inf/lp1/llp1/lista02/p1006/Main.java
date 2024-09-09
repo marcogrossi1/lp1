@@ -17,5 +17,6 @@ public class Main {
         media = (nota1 * 2 + nota2 * 3 + nota3 * 5)/10;
         
         System.out.printf("MEDIA = %.1f\n", media);
+        input.close();
     }
 }

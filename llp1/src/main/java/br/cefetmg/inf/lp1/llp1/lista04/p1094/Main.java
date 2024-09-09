@@ -28,5 +28,7 @@ public class Main {
         System.out.printf("Percentual de coelhos: %.2f %%\n", (double) totalCoelhos/totalCobaias * 100);
         System.out.printf("Percentual de ratos: %.2f %%\n", (double) totalRatos/totalCobaias * 100);
         System.out.printf("Percentual de sapos: %.2f %%\n", (double) totalSapos/totalCobaias * 100);
+
+        input.close();
     }
 }

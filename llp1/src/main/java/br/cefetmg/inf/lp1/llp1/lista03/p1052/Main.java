@@ -21,6 +21,8 @@ public class Main {
             case 10: System.out.println("October"); break;
             case 11: System.out.println("November"); break;
             case 12: System.out.println("December");
+
+            input.close();
         }
     }
 }

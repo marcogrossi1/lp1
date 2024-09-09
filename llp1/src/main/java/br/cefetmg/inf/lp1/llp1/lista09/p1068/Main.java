@@ -107,11 +107,9 @@ class ListaArray implements Lista {
             String[] aux1 = new String[pos];
             System.arraycopy(lista, 0, aux1, 0, pos);
             
-            
-            
             String[] aux2 = new String[capacidade];
             System.arraycopy(lista, pos+1, aux2, 0, tamanho() - pos-1);
-    
+
             lista = addAll(aux1, aux2);
  
             tam--;
@@ -127,9 +125,7 @@ class ListaArray implements Lista {
         return null;
     }
 
-    public void pesquisarItem(String item) {
-        int cont = 0;
-        
+    public void pesquisarItem(String item) {        
         for(int i = 0; i < tamanho(); ++i)
             if(lista[i] == item)
                 System.out.println(i);

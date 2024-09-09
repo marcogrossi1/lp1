@@ -14,5 +14,7 @@ public class Main {
        soma = a + b;
        
        System.out.printf("SOMA = %d\n", soma);
+       
+       input.close();
     }
 }

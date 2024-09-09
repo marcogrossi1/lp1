@@ -39,5 +39,7 @@ public class Main {
         System.out.printf("%d\n", a1);
         System.out.printf("%d\n", b1);
         System.out.printf("%d\n", c1);
+
+        input.close();
     }
 }

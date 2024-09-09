@@ -14,13 +14,9 @@ class Mercado {
     Banco[] ban;
     
     Mercado (int num_bancos) {
-        ban[] = new Banco[num_bancos];
+        ban = new Banco[num_bancos];
         
-        ban[0] = new Banco(6);
-    }
-            
-    char verificaLiquidez () {
-        
+        ban[0] = new Banco();
     }
 }
 
@@ -38,9 +34,7 @@ public class Main {
             mercado.ban[i].codigo = ++i;
         }
         
-        while(num_bancos != 0 && num_debentures!= 0) {
-            Banco[] ban = new Banco[num_bancos];
-            
+        while(num_bancos != 0 && num_debentures!= 0) {            
             int banco1, banco2, valor;
             
             for(int i = 0; i < num_debentures; ++i) {
@@ -54,6 +48,8 @@ public class Main {
             
             num_bancos = input.nextInt();
             num_debentures = input.nextInt();
+
+            input.close();
         }
     }
 }

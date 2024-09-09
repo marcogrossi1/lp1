@@ -18,5 +18,7 @@ public class Main {
         salario = numHoras * valorHora;
         
         System.out.printf("NUMBER = %d\nSALARY = U$ %.2f\n", numFun, salario);
+
+        input.close();
     }
 }
