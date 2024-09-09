@@ -1,4 +1,4 @@
-package llp1.br.cefetmg.inf.lp1.llp1.lista03.p1052;
+package br.cefetmg.inf.lp1.llp1.lista03.p1052;
 
 import java.util.Scanner;
 

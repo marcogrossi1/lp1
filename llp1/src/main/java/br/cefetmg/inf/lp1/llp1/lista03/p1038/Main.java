@@ -1,4 +1,4 @@
-package llp1.br.cefetmg.inf.lp1.llp1.lista03.p1038;
+package br.cefetmg.inf.lp1.llp1.lista03.p1038;
 
 import java.util.Scanner;
 import java.util.Locale;
