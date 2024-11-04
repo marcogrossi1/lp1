@@ -24,6 +24,7 @@ interface Lista<T> {
 	void exibeLista();
 }
 
+@SuppressWarnings("unchecked")
 class ListaArray<T> implements Lista<T> {
 	private int capacidade = 5, OFF_SET = 5, tam = 0, ultimo = 0;
 	private T[] lista = (T[]) new Object[capacidade];
@@ -489,6 +490,7 @@ class ListaDuplamenteEncadeada<T> implements Lista<T> {
 }
 
 class Implementa {
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static Lista sort(Lista lista) {
 		int tam = lista.tamanho();
 		Object[] a = new Object[lista.tamanho()];
@@ -499,7 +501,7 @@ class Implementa {
 		}
 
 		catch(ListaVaziaException e) {
-			System.out.println("AtenC'C#o, lista vazia!");
+			System.out.println("Atenção, lista vazia!");
 		}
 
 		for(int j = 0; j < tam-1; j++)
@@ -532,6 +534,7 @@ public class Main {
 			listaAux.inserir(a);
 		}
 
+		@SuppressWarnings("unchecked")
 		Lista<Integer> lista1 = Implementa.sort(listaBase);
 
 		lista1.exibeLista();
