@@ -4,12 +4,13 @@ import java.util.Stack;
 import java.util.EmptyStackException;
 import java.util.Scanner;
     
+@SuppressWarnings("SequencedCollectionMethodCanBeUsed")
 public class Main {
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
 
         while(input.hasNext()) {
-            Stack<String> pilha = new Stack<String>();
+            Stack<String> pilha = new Stack<>();
             String a = input.nextLine();
             
             int err = 0;
@@ -31,11 +32,7 @@ public class Main {
                             err = 1;
                             break;
                         }
-                        
-                        
                     }
-
-                    err = 0;
                 }
             }
 
