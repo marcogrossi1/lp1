@@ -2,54 +2,44 @@ package br.cefetmg.inf.lp1.llp1.lista06.p1105;
 
 import java.util.Scanner;
 
-class Banco {
-    int codigo, valorTotal;
-    
-    void calculaTotal (int valor) {
-        valorTotal += valor;
-    }    
-}
-
-class Mercado {
-    Banco[] ban;
-    
-    Mercado (int num_bancos) {
-        ban = new Banco[num_bancos];
-        
-        ban[0] = new Banco();
-    }
-}
-
 public class Main {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        
-        int num_bancos = input.nextInt();
-        int num_debentures = input.nextInt();
-       
-        Mercado mercado = new Mercado(num_bancos);
-        
-        for(int i = 0; i < num_bancos; ++i) {
-            mercado.ban[i].valorTotal = input.nextInt();
-            mercado.ban[i].codigo = ++i;
-        }
-        
-        while(num_bancos != 0 && num_debentures!= 0) {            
-            int banco1, banco2, valor;
-            
-            for(int i = 0; i < num_debentures; ++i) {
-                banco1 = input.nextInt();
-                banco2 = input.nextInt();                
-                valor = input.nextInt();
-                
-                mercado.ban[banco1].calculaTotal(valor);
-                mercado.ban[banco2].calculaTotal(-valor);
-            }
-            
-            num_bancos = input.nextInt();
-            num_debentures = input.nextInt();
+    static int[] bancos;
 
-            input.close();
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int b, n;
+
+        while (true) {
+            b = in.nextInt();
+            n = in.nextInt();
+
+            if (b == 0 && n == 0) break;
+
+            bancos = new int[b + 1];
+            for (int i = 1; i - 1 < b; i++)
+                bancos[i] = in.nextInt();
+
+            for (int i = 0; i < n; i++) {
+                int ban_dev, ban_rec, val;
+                
+                ban_dev = in.nextInt();
+                ban_rec = in.nextInt();
+                val = in.nextInt();
+                bancos[ban_dev] -= val;
+                bancos[ban_rec] += val;
+            }
+
+            for (int i = 1; i <= b; i++) {
+                if (bancos[i] < 0) {
+                    System.out.println("N");
+                    break;
+                }
+
+                if (i == b)
+                    System.out.println("S");
+            }
         }
+
+        in.close();
     }
 }
