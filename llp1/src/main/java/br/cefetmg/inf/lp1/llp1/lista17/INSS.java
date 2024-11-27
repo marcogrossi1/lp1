@@ -1,6 +1,6 @@
 package br.cefetmg.inf.lp1.llp1.lista17;
 
-public class INSS implements Taxes{
+public class INSS {
     public static Double calculateTax (Double sal) throws InvalidSalaryException {
         if (sal < 0) {
             throw new InvalidSalaryException();
