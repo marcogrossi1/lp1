@@ -8,7 +8,7 @@ public class Worker {
     private String name;
     private double workedHours = 0, extraWorkedHours = 0;
     private double salary = 0;
-    private LinkedHashMap<String, Double> workHistory = new LinkedHashMap<>();
+    private final LinkedHashMap<String, Double> workHistory = new LinkedHashMap<>();
 
     Worker(int id, String name) {
         this.id = id;

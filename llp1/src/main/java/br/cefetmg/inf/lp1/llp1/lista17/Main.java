@@ -15,8 +15,10 @@ public class Main {
             int id = Integer.parseInt(line[0]);
 
             StringBuilder name = new StringBuilder(line[1]);
-            for(int j = 2; j < line.length; ++j)
-                name.append(" " + line[j]);
+            for(int j = 2; j < line.length; ++j) {
+                String word = " " + line[j];
+                name.append(word);
+            }
 
             workersList.put(id, new Worker(id, name.toString()));
         }
